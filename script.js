@@ -9,12 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const icons = document.querySelectorAll('.icon i');
     const sections = document.querySelectorAll('.content-section');
 
-    const popularNames = [
-        "Liam", "Noah", "Oliver", "Elijah", "William", "James", "Benjamin", "Lucas",
-        "Henry", "Alexander", "Mason", "Michael", "Ethan", "Daniel", "Jacob", "Logan",
-        "Jackson", "Levi", "Sebastian", "Mateo"
-    ];
-
     function updateCharLimit() {
         const remaining = 15 - nameInput.value.length;
         charLimitDisplay.textContent = `Character limit: ${remaining}`;
@@ -36,13 +30,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function validateNameInput() {
         const name = nameInput.value.trim();
-        const isValid = /^[a-zA-Z]*$/.test(name);
+        const isValid = /^[a-zA-Z]*$/.test(name); // Only allow alphabet characters
         if (!isValid) {
-            errorMessage.style.display = 'block';
-            nameInput.classList.add('invalid');
+            errorMessage.style.display = 'block';  // Show error message
+            nameInput.classList.add('invalid');   // Add 'invalid' class for styling
         } else {
-            errorMessage.style.display = 'none';
-            nameInput.classList.remove('invalid');
+            errorMessage.style.display = 'none';   // Hide error message
+            nameInput.classList.remove('invalid'); // Remove 'invalid' class
         }
         return isValid;
     }
@@ -63,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     nameInput.addEventListener('keypress', (e) => {
+        // If the Enter key is pressed and the name is valid
         if (e.key === 'Enter' && validateNameInput()) {
             const name = nameInput.value.trim();
             if (name) {
@@ -73,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.addEventListener('keypress', (e) => {
+        // Focus on the name input when '/' is pressed
         if (e.key === '/') {
             e.preventDefault();
             nameInput.focus();
