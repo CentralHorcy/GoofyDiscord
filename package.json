@@ -1,8 +1,8 @@
 {
-  "name": "dark-theme-website",
+  "name": "Goofy like Discord",
   "version": "1.0.0",
   "description": "A simple dark theme website with a greyish color scheme.",
-  "main": "src/index.html",
+  "main": "index.html",
   "scripts": {
     "start": "live-server src"
   },
