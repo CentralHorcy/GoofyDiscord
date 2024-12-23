@@ -57,6 +57,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     nameInput.addEventListener('keypress', (e) => {
+        // Allow typing any alphabet key and prevent non-alphabet keys
+        const key = e.key;
+        if (!/^[a-zA-Z]$/.test(key)) {  // If the key is not an alphabet
+            e.preventDefault();  // Prevent the input
+        }
+
         // If the Enter key is pressed and the name is valid
         if (e.key === 'Enter' && validateNameInput()) {
             const name = nameInput.value.trim();
