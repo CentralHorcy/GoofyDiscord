@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme Website</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="name-input-container">
+        <h1>Enter Your Name</h1>
+        <input type="text" id="nameInput" maxlength="15" placeholder="Your name">
+        <div class="char-limit">Character limit: 15</div>
+        <div class="error-message">Only alphabet letters are allowed.</div>
+        <button id="submitName">Submit</button>
+    </div>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <div class="divider"></div>
+        <div class="icon skeleton" id="icon1"><i class="fas fa-home"></i></div>
+        <div class="icon skeleton" id="icon2"><i class="fas fa-user"></i></div>
+        <div class="icon skeleton" id="icon3"><i class="fas fa-cog"></i></div>
+        <div class="icon skeleton" id="icon4"><i class="fas fa-sign-out-alt"></i></div>
+    </div>
+    <div class="main-content">
+        <div id="content1" class="content-section home-content">
+            <h1>Welcome to the Website!</h1>
+            <p class="hidden">We're glad to have you here. Explore the latest updates and news.</p>
+        </div>
+        <div id="content2" class="content-section profile-content hidden">
+            <h1>User Profile</h1>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
+            <p class="hidden">This is the user profile page. You can view and edit your profile information here.</p>
+        </div>
+        <div id="content3" class="content-section settings-content hidden">
+            <h1>Settings</h1>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
+            <p class="hidden">Here you can change your settings. Customize your preferences and account details.</p>
+        </div>
+        <div id="content4" class="content-section logout-content hidden">
+            <h1>Logout</h1>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
+            <div class="skeleton-text"></div>
+            <p class="hidden">You have been logged out. Thank you for visiting. See you next time!</p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
