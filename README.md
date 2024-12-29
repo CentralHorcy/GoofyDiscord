@@ -1,7 +1,7 @@
 # Goofy Discord-like Website
 
 
-[WEBSITE HERE](https://centralhorcy.github.io/Draft/)
+[WEBSITE HERE](https://centralhorcy.github.io/GoofyDiscord/)
 
 ```
 ├── index.html            # The main webpage
